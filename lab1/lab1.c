@@ -3,15 +3,17 @@
 #include <pthread.h> 
 #include <errno.h>
 
-#define NUMP 3
+#define NUMP 5
 
 pthread_mutex_t fork_mutex[NUMP];
 pthread_mutex_t eat_mutex;
- 
-main()  
+int numeating=0;
+pthread_cond_t numavail = PTHREAD_COND_INITIALIZER;
+
+main()
 {
   int i;
-  pthread_t diner_thread[NUMP]; 
+  pthread_t diner_thread[NUMP];
   int dn[NUMP];
   void *diner();
   pthread_mutex_init(&eat_mutex, NULL);
@@ -39,16 +41,28 @@ void *diner(int *i)
     sleep( v/2);
     printf("%d is hungry\n", v);
     pthread_mutex_lock(&eat_mutex);
+
+    if(numeating == (NUMP-1)){
+      pthread_cond_wait(&numavail,&eat_mutex);
+    }
+    ++numeating;
+    pthread_mutex_unlock(&eat_mutex);
+
+
     pthread_mutex_lock(&fork_mutex[v]);
     pthread_mutex_lock(&fork_mutex[(v+1)%NUMP]);
-    pthread_mutex_unlock(&eat_mutex);
     printf("%d is eating\n", v);
     eating++;
     sleep(1);
     printf("%d is done eating\n", v);
     pthread_mutex_unlock(&fork_mutex[v]);
     pthread_mutex_unlock(&fork_mutex[(v+1)%NUMP]);
+    pthread_mutex_lock(&eat_mutex);
+    if (numeating == (NUMP - 1)){
+      pthread_cond_signal(&numavail);
+    }
+    --numeating;
+    pthread_mutex_unlock(&eat_mutex);
   }
   pthread_exit(NULL);
 }
- 
