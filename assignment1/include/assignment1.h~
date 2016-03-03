@@ -1,0 +1,43 @@
+/*Header file*/
+#ifndef _ASSIGNMENT1_H_
+#define _ASSIGNMENT1_H_
+
+#include<stdio.h>
+#include<pthread.h>
+#include<sys/time.h>
+#include<unistd.h>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<queue>
+#include<list>
+#include<ctime>
+#include<cstdlib> 
+#include<algorithm>
+
+struct Product
+{
+  int nId; /*A unique product id, which can be either a string or an integer.*/
+  timeval tvGenerateTime; /*A time-stamp of when the product was generated*/
+  int nLife;/*The "life" of the product, which is a positive integer number that is randomly generated. The value should be capped at 1024 numbers by calling random in the following manner: random()%1024.*/
+};
+
+struct ProductQueueItem
+{
+  Product * pProduct; /**/
+  ProductState state;
+};
+
+struct ProducerThreadInfo
+{
+  pthread_t threadId; /*a unique thread id*/
+  int productNum; /*a unique id*/
+};
+
+struct ConsumerThreadInfo
+{
+  pthread_t threadId; /*a unique thread id*/
+  int productNum; /*a unique product id*/
+};
+#endif
+
