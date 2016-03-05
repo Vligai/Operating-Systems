@@ -1,9 +1,9 @@
 NAME=main
-SRC=main.c
-OBJ=$(SRC:.c=.o)
+SRC=assignment1.cpp
+OBJ=$(SRC:.cpp=.o)
 RM = rm -f
 all: $(OBJ)
-	gcc $(OBJ) -lpthread -Wall -pedantic-errors -o $(NAME)
+	g++ $(OBJ) -lpthread -Wall -pedantic-errors -o $(NAME)
 
 clean:
 	-$(RM) *~
