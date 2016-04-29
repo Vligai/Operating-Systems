@@ -1,0 +1,7 @@
+ 14705    1 -rw-r--r--   1 vligai   student       307 Apr 29 12:35 ./assignment3.h
+ 14713    1 -rw-r--r--   1 vligai   student         0 Apr 29 12:41 ./file_list.txt
+ 14708    1 -rw-r--r--   1 vligai   student        25 Apr 29 12:38 ./main.cpp~
+ 14711    1 -rw-r--r--   1 vligai   student        75 Apr 29 12:40 ./main.cpp
+ 14696    1 -rw-r--r--   1 vligai   student       200 Apr 29 12:31 ./Makefile~
+ 14701    1 -rw-r--r--   1 vligai   student       194 Apr 29 12:33 ./Makefile
+ 14712    1 -rw-r--r--   1 vligai   student         3 Apr 29 12:41 ./dir_list.txt
