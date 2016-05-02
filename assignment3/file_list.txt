@@ -1,7 +1,9 @@
- 14705    1 -rw-r--r--   1 vligai   student       307 Apr 29 12:35 ./assignment3.h
- 14713    1 -rw-r--r--   1 vligai   student         0 Apr 29 12:41 ./file_list.txt
- 14708    1 -rw-r--r--   1 vligai   student        25 Apr 29 12:38 ./main.cpp~
- 14711    1 -rw-r--r--   1 vligai   student        75 Apr 29 12:40 ./main.cpp
- 14696    1 -rw-r--r--   1 vligai   student       200 Apr 29 12:31 ./Makefile~
- 14701    1 -rw-r--r--   1 vligai   student       194 Apr 29 12:33 ./Makefile
- 14712    1 -rw-r--r--   1 vligai   student         3 Apr 29 12:41 ./dir_list.txt
+ 15045    1 -rwx------   1 vligai   student       194 May  1 18:39 ./Makefile
+ 15051    2 -rwx------   1 vligai   student         0 May  1 20:01 ./file_list.txt
+ 15049    1 -rwx------   1 vligai   student       307 May  1 18:39 ./assignment3.h
+ 15048    4 -rwx------   1 vligai   student      2718 May  1 18:39 ./trees/tree_util.hh
+ 15047  100 -rwx------   1 vligai   student    100910 May  1 18:39 ./trees/tree.hh
+ 15052   24 -rwx------   1 vligai   student     23497 May  1 19:56 ./main.cpp
+ 15054  387 -rw-r--r--   1 vligai   student    304128 May  1 20:00 ./main.o
+ 15055  259 -rwxr-xr-x   1 vligai   student    137354 May  1 20:00 ./main
+ 15050    1 -rwx------   1 vligai   student        11 May  1 20:01 ./dir_list.txt
