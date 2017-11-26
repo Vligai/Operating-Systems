@@ -1,9 +1,4 @@
 #include "assignment3.h"
-/*
-  The goal of this assignment is to manage a file system by first
-  instantiating a file system based on an existing directory structure, 
-  and then manipulating the files in the file system.
-*/
 /*strtok implementation for vectors*/
 vector<string> my_strtok(string line,string delim){
   char* sttok;
