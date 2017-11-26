@@ -1,8 +1,6 @@
 #include "assignment1.h"
 /*Vladislav Ligai*/
-/*Assignmen 1*/
-/*The goal of this assignment is to simulate a producer-consumer system using threads, mutexes, condition variables and scheduling. You will experiment with varying the numbers of available producer and consumer threads, the number of products, and the scheduling algorithm used to schedule the consumption of products. Your program must accept the following parameters at the command prompt in the order specified*/
-/*fibonachi function*/
+
 int fib(int N)
 {
   int i;
