@@ -1,2 +1,2 @@
 # Operating-Systems
-CS in c
+CS in C++
