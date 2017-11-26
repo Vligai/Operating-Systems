@@ -1,7 +1,6 @@
 #include "assign.h"
 /*
 Vladislav Ligai
-The goal of this assignment is to simulate a virtual memory management system.
 */
 /*To string function*/
 string to_String(int i)
